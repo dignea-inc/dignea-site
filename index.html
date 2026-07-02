@@ -5,9 +5,49 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dignéa : vieillir dignement, c'est une affaire publique</title>
 <meta name="description" content="Dignéa relie les familles, les résidences pour aînés et le réseau public du Québec. Recherche en langage naturel, disponibilités en temps réel, mode urgence 48h. Gratuit pour les familles.">
+<link rel="canonical" href="https://dignea.ca/">
+<link rel="alternate" hreflang="fr-CA" href="https://dignea.ca/">
+<link rel="alternate" hreflang="en-CA" href="https://dignea.ca/en/">
+<link rel="alternate" hreflang="x-default" href="https://dignea.ca/">
+<meta name="theme-color" content="#FBF9F7">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dignéa">
+<meta property="og:title" content="Dignéa : vieillir dignement, c'est une affaire publique">
+<meta property="og:description" content="Dignéa relie les familles, les résidences pour aînés et le réseau public du Québec. Recherche en langage naturel, disponibilités en temps réel, mode urgence 48h. Gratuit pour les familles.">
+<meta property="og:url" content="https://dignea.ca/">
+<meta property="og:image" content="https://dignea.ca/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dignéa : vieillir dignement, c'est une affaire publique. dignea.ca, pré-lancement, Québec.">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:locale:alternate" content="en_CA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dignéa : vieillir dignement, c'est une affaire publique">
+<meta name="twitter:description" content="Dignéa relie les familles, les résidences pour aînés et le réseau public du Québec. Gratuit pour les familles.">
+<meta name="twitter:image" content="https://dignea.ca/og.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z' fill='%23B8860B'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Dignéa",
+  "legalName": "Dignéa Inc.",
+  "url": "https://dignea.ca/",
+  "logo": "https://dignea.ca/apple-touch-icon.png",
+  "email": "contact@dignea.ca",
+  "foundingDate": "2026",
+  "founder": [
+    { "@type": "Person", "name": "Gabriel Boutin" },
+    { "@type": "Person", "name": "Pierre-Paul Dorelien" }
+  ],
+  "address": { "@type": "PostalAddress", "addressRegion": "QC", "addressCountry": "CA" },
+  "description": "Dignéa relie les familles, les résidences pour aînés et le réseau public du Québec."
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <!--
   SITE PUBLIC DIGNÉA (pré-lancement).
@@ -53,18 +93,34 @@
   .nav-links a:hover{color:var(--navy)}
   @media(min-width:860px){.nav-links{display:flex}}
   /* buttons */
-  .btn{display:inline-flex;align-items:center;gap:.5em;font-weight:600;font-size:.95rem;text-decoration:none;border-radius:.7rem;padding:.8rem 1.5rem;transition:transform .2s,box-shadow .2s}
+  .btn{display:inline-flex;align-items:center;gap:.5em;font-weight:600;font-size:.95rem;text-decoration:none;border-radius:.7rem;padding:.8rem 1.5rem;white-space:nowrap;transition:transform .2s,box-shadow .2s}
   .btn-primary{background:var(--navy);color:#fff;box-shadow:0 12px 30px -14px rgba(30,52,96,.5)}
   .btn-primary:hover{transform:translateY(-2px)}
   .btn-ghost{color:var(--navy);border-bottom:1px solid var(--goldline);border-radius:0;padding:.4rem 0}
   .btn-row{display:flex;flex-wrap:wrap;align-items:center;gap:1.3rem}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+  .skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--navy);color:#fff;padding:.7rem 1.2rem;border-radius:0 0 .6rem 0;font-weight:600;text-decoration:none}
+  .skip:focus{left:0}
+  #probleme,#conseillers,#portails,#modele,#partenaires,#familles{scroll-margin-top:84px}
+  /* header responsive */
+  .lang{font-size:.8rem;font-weight:600;color:var(--ink);text-decoration:none;letter-spacing:.04em;padding:12px 10px;margin:-12px -4px}
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--hair);border-radius:.6rem;background:transparent;cursor:pointer;color:var(--navy);padding:0}
+  @media(min-width:860px){.menu-btn{display:none}}
+  .mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(251,249,247,.98);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair);box-shadow:0 24px 40px -24px rgba(30,52,96,.25);padding:8px 0 14px}
+  .mobile-menu.open{display:block}
+  .mobile-menu a{display:block;padding:13px clamp(20px,5vw,48px);text-decoration:none;font-weight:500;color:var(--ink);font-size:1rem}
+  .mobile-menu a:hover{color:var(--navy)}
+  @media(max-width:539px){.pre-badge{display:none}}
+  @media(max-width:479px){.nav-in .lang{display:none}}
+  .mobile-menu .lang-item{border-top:1px solid var(--hair);margin-top:6px;padding-top:16px;color:var(--muted);font-size:.9rem}
   /* hero */
   .hero h1{font-size:clamp(2.6rem,7.5vw,5.4rem);max-width:15ch;margin:0 0 1.4rem}
   .hero .lede{margin:0 0 2.2rem}
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:22px;margin:2rem 0}
-  .stat .num{font-family:var(--serif);font-weight:600;color:var(--gold);font-size:clamp(2.2rem,5vw,2.9rem);line-height:1;letter-spacing:-.02em}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:2rem 0}
+  @media(max-width:599px){.stats{grid-template-columns:1fr;gap:18px}.stat+.stat{border-top:1px solid var(--hair);padding-top:18px}}
+  .stat .num{font-family:var(--serif);font-weight:600;color:var(--gold);font-size:clamp(2.2rem,5vw,2.9rem);line-height:1;letter-spacing:-.02em;font-variant-numeric:lining-nums}
   .stat p{font-size:.92rem;color:var(--ink);font-weight:500;margin:.5rem 0 .25rem;line-height:1.4}
-  .stat .src{font-size:.72rem;color:rgba(26,31,43,.5)}
+  .stat .src{font-size:.72rem;color:rgba(26,31,43,.62)}
   /* trust dots */
   .trust{display:flex;flex-wrap:wrap;gap:1.1rem 1.5rem;margin-top:2.4rem}
   .trust span{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;text-transform:uppercase;letter-spacing:.13em;font-weight:600;color:var(--muted)}
@@ -74,37 +130,30 @@
   .band-navy .eyebrow{color:#E7B23C;display:inline-flex;align-items:center;gap:.5rem}
   .band-navy .dot-u{width:6px;height:6px;border-radius:50%;background:var(--urgent)}
   .big740{display:flex;align-items:baseline;gap:1.2rem;flex-wrap:wrap;margin-bottom:1rem}
-  .big740 .n{font-family:var(--serif);font-weight:600;color:var(--cream);font-size:clamp(4rem,15vw,8.5rem);line-height:.82;letter-spacing:-.04em}
-  .big740 .l{font-family:var(--serif);font-style:italic;font-weight:500;color:#E7B23C;font-size:clamp(1.3rem,3.6vw,2.1rem);line-height:1.12;max-width:14ch}
-  .band-navy .body{font-size:1.05rem;color:rgba(245,239,228,.85);max-width:54ch;margin-bottom:1.2rem}
-  .band-navy .src{font-size:.74rem;color:rgba(245,239,228,.5)}
+  .big740 .n{font-family:var(--serif);font-weight:600;color:var(--cream);font-size:clamp(4rem,15vw,8.5rem);line-height:.82;letter-spacing:-.04em;font-variant-numeric:lining-nums}
+  .big740 .l{font-family:var(--serif);font-style:italic;font-weight:500;color:#E7B23C;font-size:clamp(1.3rem,3.6vw,2.1rem);line-height:1.12;max-width:20ch}
+  .band-navy .body{font-size:1.05rem;color:rgba(245,239,228,.85);max-width:64ch;margin-bottom:1.2rem}
+  .band-navy .src{font-size:.74rem;color:rgba(245,239,228,.65)}
   /* ecosystem */
   .eco{display:grid;gap:32px;align-items:center;margin-top:2.5rem}
   @media(min-width:820px){.eco{grid-template-columns:1.1fr 1fr}}
   .eco-diagram{position:relative;background:var(--cream);border-radius:20px;padding:clamp(22px,4vw,38px);display:flex;flex-direction:column;align-items:center;gap:16px}
-  .node{background:#fff;border:1px solid var(--hair);border-radius:14px;padding:14px;text-align:center}
-  .node .pin{width:9px;height:9px;border-radius:50%;display:inline-block;margin-bottom:6px}
-  .node h4{font-family:var(--serif);font-size:1.1rem;color:var(--navy);font-weight:600;margin:0}
-  .node p{font-size:.74rem;color:var(--muted);margin:2px 0 0}
-  .core{grid-column:1 / -1;background:var(--navy);color:var(--cream);border:none;border-radius:14px;padding:16px;text-align:center}
-  .core h4{color:#E7B23C;font-style:italic}
-  .core p{color:rgba(245,239,228,.75)}
   /* personas */
   .grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:2.5rem}
   .persona{background:#fff;border:1px solid var(--hair);border-radius:16px;padding:22px;box-shadow:0 1px 2px rgba(27,42,74,.04),0 12px 32px -16px rgba(27,42,74,.12)}
   .persona .av{width:42px;height:42px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:1rem;margin-bottom:14px}
-  .persona h4{font-family:var(--serif);font-size:1.35rem;color:var(--navy);font-weight:600;margin:0}
+  .persona h3{font-family:var(--serif);font-size:1.35rem;color:var(--navy);font-weight:600;margin:0}
   .persona .role{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:600;margin:.2rem 0 .8rem}
   .persona .voice{font-size:.92rem;color:var(--muted);font-style:italic;line-height:1.5}
   .channels{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem}
-  .channels span{font-size:.78rem;color:var(--muted);background:var(--cream);border-radius:20px;padding:.4rem .9rem;font-weight:500}
+  .channels span{font-size:.78rem;color:var(--muted);background:#fff;border:1px solid var(--hair);border-radius:20px;padding:.4rem .9rem;font-weight:500}
   /* portals / mockups */
   .portal{display:grid;gap:30px;align-items:center;margin-top:3rem}
   @media(min-width:880px){.portal{grid-template-columns:1fr 1fr}.portal.flip .pcopy{order:2}}
   .portal .ptag{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;font-weight:600;margin-bottom:.8rem;display:inline-flex;align-items:center;gap:.5rem}
   .portal h3{font-size:clamp(1.6rem,3.2vw,2.2rem);margin-bottom:.8rem}
   .portal p{color:var(--muted);max-width:42ch}
-  .mock-surface{background:var(--cream);border-radius:20px;padding:clamp(18px,3vw,30px);display:flex;justify-content:center}
+  .mock-surface{background:var(--cream);border-radius:20px;padding:clamp(22px,3vw,30px);display:flex;justify-content:center}
   /* phone mock */
   .phone{width:288px;max-width:100%;background:#0d1830;border-radius:36px;padding:9px;box-shadow:0 24px 60px -24px rgba(13,24,48,.55)}
   .phone .scr{background:var(--warm);border-radius:28px;overflow:hidden}
@@ -126,16 +175,17 @@
   .bbody{display:flex;background:#fff;min-height:330px}
   .bside{width:142px;flex-shrink:0;background:var(--navy);padding:13px 0;color:rgba(245,239,228,.7);font-size:10.5px}
   .bside .m{font-family:var(--serif);font-weight:600;font-size:13px;color:#fff;padding:0 13px 12px;display:inline-flex;align-items:center;gap:6px}
-  .bside a{display:block;padding:7px 13px;text-decoration:none}
-  .bside a.on{color:#fff;background:rgba(111,135,168,.34);border-left:2px solid var(--gold);font-weight:500}
+  .bside span.item{display:block;padding:7px 13px}
+  .bside span.on{color:#fff;background:rgba(111,135,168,.34);border-left:2px solid var(--gold);font-weight:500}
   .bmain{flex:1;padding:15px;min-width:0}
   .advisor{display:flex;align-items:center;gap:9px;border-radius:10px;padding:9px 11px;margin-bottom:13px;font-size:11px;color:var(--navy);line-height:1.4}
   .advisor .av{width:24px;height:24px;border-radius:50%;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600}
   .kanban{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+  @media(max-width:599px){.bside{display:none}.bmain{padding:12px}.kanban{gap:7px}.kcard{padding:7px 8px}}
   .kcol p.h{font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;color:rgba(26,31,43,.5);font-weight:600;margin-bottom:7px}
   .kcard{background:#fff;border:1px solid rgba(26,31,43,.1);border-radius:10px;padding:8px 9px;margin-bottom:7px}
   .kcard .nm{font-size:11.5px;color:var(--navy);font-weight:500}
-  .kcard .meta{font-size:9px;color:rgba(26,31,43,.55);margin:2px 0 5px}
+  .kcard .meta{font-size:9px;color:rgba(26,31,43,.62);margin:2px 0 5px}
   .ktag{font-size:8.5px;font-weight:600;padding:2px 6px;border-radius:20px}
   /* marketplace */
   .price-line{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.6rem);color:var(--navy);font-weight:600;max-width:18ch}
@@ -153,23 +203,37 @@
   footer .mission{font-family:var(--serif);font-size:1.25rem;color:var(--cream);max-width:30ch;margin:1.2rem 0}
   footer .meta{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;font-size:.82rem;margin:1.4rem 0}
   footer .founders{font-size:.85rem;color:rgba(245,239,228,.8)}
-  footer .sources{font-size:.72rem;color:rgba(245,239,228,.45);border-top:1px solid rgba(245,239,228,.14);padding-top:1.4rem;margin-top:1.8rem;line-height:1.7}
-  footer .pre{font-size:.72rem;color:rgba(245,239,228,.5);margin-top:.6rem}
+  footer .sources{font-size:.72rem;color:rgba(245,239,228,.6);border-top:1px solid rgba(245,239,228,.14);padding-top:1.4rem;margin-top:1.8rem;line-height:1.7}
+  footer .pre{font-size:.72rem;color:rgba(245,239,228,.65);margin-top:.6rem}
+  footer .legal{font-size:.82rem;margin-top:1rem}
+  footer .legal a{color:rgba(245,239,228,.85);text-decoration:underline;text-underline-offset:3px}
+  footer a{color:inherit}
+  @media(min-width:820px){.foot-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px 56px;align-items:start}}
   /* reveal */
   .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
   .reveal.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.tw{animation:none}html{scroll-behavior:auto}}
+  /* print */
+  @media print{
+    header.nav,.mobile-menu,.menu-btn,.skip{display:none}
+    body,.band-navy,footer{background:#fff!important;color:#000!important}
+    .band-navy *,footer *{color:#000!important}
+    .reveal{opacity:1!important;transform:none!important}
+    .mock-surface{display:none}
+  }
 </style>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 
+<a class="skip" href="#top">Passer au contenu principal</a>
 <header class="nav">
-  <div class="wrap nav-in">
+  <div class="wrap"><div class="nav-in">
     <div style="display:flex;align-items:center;gap:10px">
       <a href="#top" class="mark" style="text-decoration:none;font-size:1.3rem" aria-label="Dignéa, accueil">
         <svg class="tw" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B8860B"/></svg>DIGNÉA
       </a>
-      <span style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;font-weight:600;color:var(--gold);border:1px solid var(--goldline);border-radius:20px;padding:3px 9px">Pré-lancement</span>
+      <span class="pre-badge" style="font-size:.6rem;text-transform:uppercase;letter-spacing:.14em;font-weight:600;color:var(--gold);border:1px solid var(--goldline);border-radius:20px;padding:3px 9px">Pré-lancement</span>
     </div>
     <nav class="nav-links" aria-label="Sections">
       <a href="#probleme">Le problème</a>
@@ -177,11 +241,21 @@
       <a href="#portails">La plateforme</a>
       <a href="#modele">Le modèle</a>
     </nav>
-    <div style="display:flex;align-items:center;gap:16px">
-      <a href="en/" aria-label="English version" style="font-size:.8rem;font-weight:600;color:var(--ink);text-decoration:none;letter-spacing:.04em">EN</a>
-      <a href="mailto:contact@dignea.ca" class="btn btn-primary" style="padding:.6rem 1.2rem;font-size:.88rem">Accès anticipé</a>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="en/" class="lang" aria-label="English version" hreflang="en" lang="en">EN</a>
+      <a href="mailto:contact@dignea.ca?subject=Demande%20d%27acc%C3%A8s%20anticip%C3%A9%20%C3%A0%20Dign%C3%A9a" class="btn btn-primary" style="padding:.6rem 1.2rem;font-size:.88rem">Accès anticipé</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4.5h14M2 9h14M2 13.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
     </div>
-  </div>
+  </div></div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Sections (menu mobile)">
+    <a href="#probleme">Le problème</a>
+    <a href="#conseillers">Les conseillers</a>
+    <a href="#portails">La plateforme</a>
+    <a href="#modele">Le modèle</a>
+    <a href="en/" class="lang-item" hreflang="en" lang="en">English version &rarr;</a>
+  </nav>
 </header>
 
 <main id="top">
@@ -199,7 +273,7 @@
         <div class="stat"><div class="num">&gt;&#8201;7 mois</div><p>d'attente moyenne pour une place en CHSLD</p><span class="src">AREQ, 2026</span></div>
       </div>
       <div class="btn-row reveal">
-        <a href="mailto:contact@dignea.ca" class="btn btn-primary">Demander un accès anticipé</a>
+        <a href="mailto:contact@dignea.ca?subject=Demande%20d%27acc%C3%A8s%20anticip%C3%A9%20%C3%A0%20Dign%C3%A9a" class="btn btn-primary">Demander un accès anticipé</a>
         <a href="#partenaires" class="btn btn-ghost">Pour les partenaires &rarr;</a>
       </div>
       <div class="trust reveal">
@@ -278,10 +352,10 @@
       <h2 class="reveal" style="font-size:clamp(2rem,5vw,3.2rem);max-width:20ch">Quatre conseillers, conçus pour tenir la conversation et toute la <em>logistique</em>.</h2>
       <p class="lede reveal" style="margin-top:1.2rem">Pensés pour être disponibles 24/7, en français québécois naturel, par clavardage et par téléphone. Sans commission, sans heures de bureau.</p>
       <div class="grid-4">
-        <div class="persona reveal"><span class="av" style="background:var(--lavande)">S</span><h4>Sophie</h4><p class="role">Familles</p><p class="voice">« Je comprends tout à fait. On va trouver ensemble, à votre rythme. »</p></div>
-        <div class="persona reveal"><span class="av" style="background:var(--sage)">N</span><h4>Nadia</h4><p class="role">Réseau public · CIUSSS</p><p class="voice">« J'ai trois résidences avec une place. Je priorise les dossiers urgents. »</p></div>
-        <div class="persona reveal"><span class="av" style="background:var(--slate)">D</span><h4>Daniel</h4><p class="role">Gestionnaires de résidences</p><p class="voice">« Trois nouveaux prospects cette semaine. On planifie les visites ? »</p></div>
-        <div class="persona reveal"><span class="av" style="background:var(--ocre)">S</span><h4>Samuel</h4><p class="role">Administration</p><p class="voice">« Vos états des résultats sont à jour. Voici ce qui ressort ce mois-ci. »</p></div>
+        <div class="persona reveal"><span class="av" style="background:var(--lavande)">S</span><h3>Sophie</h3><p class="role">Familles</p><p class="voice">« Je comprends tout à fait. On va trouver ensemble, à votre rythme. »</p></div>
+        <div class="persona reveal"><span class="av" style="background:var(--sage)">N</span><h3>Nadia</h3><p class="role">Réseau public · CIUSSS</p><p class="voice">« J'ai trois résidences avec une place. Je priorise les dossiers urgents. »</p></div>
+        <div class="persona reveal"><span class="av" style="background:var(--slate)">D</span><h3>Daniel</h3><p class="role">Résidences</p><p class="voice">« Trois nouveaux prospects cette semaine. On planifie les visites ? »</p></div>
+        <div class="persona reveal"><span class="av" style="background:var(--ocre)">S</span><h3>Samuel</h3><p class="role">Administration</p><p class="voice">« Vos états des résultats sont à jour. Voici ce qui ressort ce mois-ci. »</p></div>
       </div>
       <div class="channels reveal">
         <span>Clavardage web</span><span>Appels vocaux</span><span>SMS</span><span>Courriel</span><span>Rendez-vous</span><span>Rapports PDF</span>
@@ -300,7 +374,7 @@
       <div class="portal" id="familles">
         <div class="pcopy reveal">
           <p class="ptag" style="color:#5a4570"><span style="width:9px;height:9px;border-radius:50%;background:var(--lavande);display:inline-block"></span>Portail Familles · Sophie</p>
-          <h3>Décrivez la situation. Sophie trouve.</h3>
+          <h3>Décrivez la situation. Sophie trouvera.</h3>
           <p>Une simple conversation en langage naturel, et Sophie cherchera pour vous dans tout le réseau : disponibilités en temps réel, prix, services. Ce sera gratuit, à perpétuité. Trouvez un milieu digne, pour votre proche.</p>
         </div>
         <div class="mock-surface reveal">
@@ -308,12 +382,12 @@
             <div class="scr">
               <div class="phbar"><span class="mark" style="font-size:15px;color:#fff"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B8860B"/></svg>DIGNÉA</span><span class="who"><span style="width:16px;height:16px;border-radius:50%;background:var(--lavande);display:inline-flex;align-items:center;justify-content:center;color:#3a2c4d;font-size:9px;font-weight:600">S</span>Sophie</span></div>
               <div style="padding:14px 13px 6px;display:flex;flex-direction:column;gap:10px">
-                <div class="bubble-u">Ma mère sort de l'hôpital vendredi. Soins assistés, près de Longueuil, autour de 3 500 $.</div>
-                <div class="bubble-s">Je comprends, on va trouver ensemble. Voici 3 résidences avec une place <strong style="font-weight:600">dès maintenant</strong> :</div>
+                <div class="bubble-u">Ma mère sort de l'hôpital vendredi. Soins assistés, près de Longueuil, autour de 3&#8201;500&#8201;$.</div>
+                <div class="bubble-s">Je comprends, on va trouver ensemble. Voici 2 résidences avec une place <strong style="font-weight:600">dès maintenant</strong> :</div>
               </div>
               <div style="padding:4px 13px 8px;display:flex;flex-direction:column;gap:9px">
-                <div class="rescard"><div class="top"><span class="nm">Villa des Tilleuls</span><span class="badge b-green">Place dispo</span></div><p style="font-size:10px;color:rgba(26,31,43,.55);margin:5px 0 0">Longueuil · soins assistés · 3 280 $/mois</p><p style="font-size:9px;color:var(--vert);margin:4px 0 0">● Disponibilité vérifiée il y a 6 min</p></div>
-                <div class="rescard"><div class="top"><span class="nm">Résidence Clair-Matin</span><span class="badge b-green">2 places</span></div><p style="font-size:10px;color:rgba(26,31,43,.55);margin:5px 0 0">Brossard · soins assistés · 3 410 $/mois</p></div>
+                <div class="rescard"><div class="top"><span class="nm">Villa des Tilleuls</span><span class="badge b-green">Place dispo</span></div><p style="font-size:10px;color:rgba(26,31,43,.62);margin:5px 0 0">Longueuil · soins assistés · 3&#8201;280&#8201;$/mois</p><p style="font-size:9px;color:var(--vert);margin:4px 0 0">● Disponibilité vérifiée il y a 6 min</p></div>
+                <div class="rescard"><div class="top"><span class="nm">Résidence Clair-Matin</span><span class="badge b-green">2 places</span></div><p style="font-size:10px;color:rgba(26,31,43,.62);margin:5px 0 0">Brossard · soins assistés · 3&#8201;410&#8201;$/mois</p></div>
               </div>
               <div style="padding:6px 13px 14px"><div style="display:flex;align-items:center;gap:8px;padding:9px 11px;background:rgba(176,151,199,.14);border-radius:11px"><span style="width:22px;height:22px;border-radius:50%;background:var(--lavande);display:inline-flex;align-items:center;justify-content:center;color:#3a2c4d;font-size:10px;font-weight:600">S</span><span style="font-size:10px;color:#3a2c4d;line-height:1.35"><strong style="font-weight:600">Sophie</strong> · Je vous envoie les fiches par texto ?</span></div></div>
             </div>
@@ -334,15 +408,15 @@
             <div class="bbody">
               <aside class="bside">
                 <span class="m"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B8860B"/></svg>DIGNÉA</span>
-                <a>Tableau de bord</a><a>Fiche &amp; disponibilités</a>
-                <a class="on">CRM · Prospects <span style="background:var(--gold);color:#3a2c08;border-radius:9px;font-size:9px;padding:1px 6px;font-weight:600">5</span></a>
-                <a>Liste d'attente</a><a>Sondages familles</a><a>État des résultats</a>
+                <span class="item">Tableau de bord</span><span class="item">Fiche &amp; disponibilités</span>
+                <span class="item on">CRM · Prospects <span style="background:var(--gold);color:#3a2c08;border-radius:9px;font-size:9px;padding:1px 6px;font-weight:600">5</span></span>
+                <span class="item">Liste d'attente</span><span class="item">Sondages familles</span><span class="item">État des résultats</span>
               </aside>
               <div class="bmain">
                 <div class="advisor" style="background:rgba(111,135,168,.12)"><span class="av" style="background:var(--slate)">D</span><span><strong style="font-weight:600">Daniel</strong> · 3 prospects via Sophie cette semaine. Mme Côté attend une relance depuis 2 jours.</span></div>
                 <div class="kanban">
                   <div class="kcol"><p class="h">Nouveaux · 3</p>
-                    <div class="kcard"><p class="nm">M. Tremblay</p><p class="meta">Studio assistée · 3 200 $</p><span class="ktag" style="color:#5a4570;background:rgba(176,151,199,.2)">via Sophie</span></div>
+                    <div class="kcard"><p class="nm">M. Tremblay</p><p class="meta">Studio assistée · 3&#8201;200&#8201;$</p><span class="ktag" style="color:#5a4570;background:rgba(176,151,199,.2)">via Sophie</span></div>
                     <div class="kcard"><p class="nm">Fam. Gagnon</p><p class="meta">Urgence 48 h · 1 place</p><span class="ktag" style="color:#42513d;background:rgba(148,166,143,.24)">via CIUSSS</span></div>
                   </div>
                   <div class="kcol"><p class="h">Visite · 2</p>
@@ -375,7 +449,7 @@
                 <span style="display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--urgent);font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:var(--urgent)"></span>Demande urgente · Dossier 2026-0412</span>
                 <span style="font-size:11px;color:rgba(26,31,43,.55)">Réponses sous 48 h · 31 h écoulées</span>
               </div>
-              <p style="font-size:12px;color:rgba(26,31,43,.6);margin-bottom:6px">Profil : 82 ans · soins assistés · secteur Longueuil · diffusé à 14 résidences compatibles, 14 avril 9 h 12</p>
+              <p style="font-size:12px;color:rgba(26,31,43,.62);margin-bottom:6px">Profil : 82 ans · soins assistés · secteur Longueuil · diffusé à 14 résidences compatibles, 14 avril 9 h 12</p>
               <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
                 <div style="display:flex;justify-content:space-between;align-items:center;background:var(--warm);border-radius:10px;padding:10px 13px"><span style="font-family:var(--serif);font-size:14px;color:var(--navy)">Villa des Tilleuls</span><span style="font-size:10px;color:var(--vert);font-weight:600">Place dispo · répondu 9 h 41</span></div>
                 <div style="display:flex;justify-content:space-between;align-items:center;background:var(--warm);border-radius:10px;padding:10px 13px"><span style="font-family:var(--serif);font-size:14px;color:var(--navy)">Manoir des Cèdres</span><span style="font-size:10px;color:var(--vert);font-weight:600">Place dispo · répondu 10 h 18</span></div>
@@ -406,14 +480,15 @@
     <div class="wrap">
       <blockquote class="reveal">Chaque place vide est une famille qui attend. Nous existons pour les <em>réunir</em>.</blockquote>
       <div class="btn-row reveal">
-        <a href="mailto:contact@dignea.ca" class="btn btn-primary">Demander un accès anticipé</a>
-        <a href="mailto:rprp@dignea.ca" class="btn btn-ghost">Devenir résidence pilote &rarr;</a>
+        <a href="mailto:contact@dignea.ca?subject=Demande%20d%27acc%C3%A8s%20anticip%C3%A9%20%C3%A0%20Dign%C3%A9a" class="btn btn-primary">Demander un accès anticipé</a>
+        <a href="mailto:rprp@dignea.ca?subject=Devenir%20r%C3%A9sidence%20pilote" class="btn btn-ghost">Devenir résidence pilote &rarr;</a>
       </div>
+      <p class="reveal" style="font-size:.88rem;color:var(--muted);margin-top:1.4rem">Ou écrivez-nous directement : <a href="mailto:contact@dignea.ca" style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px">contact@dignea.ca</a></p>
       <div class="trust reveal" style="justify-content:center">
         <span><i></i>Conçu au Québec</span>
         <span><i></i>Hébergé au Canada</span>
         <span><i></i>Conforme à la Loi 25</span>
-        <span><i></i>Registre public du MSSS</span>
+        <span><i></i>Gratuit pour les familles</span>
       </div>
     </div>
   </section>
@@ -422,19 +497,36 @@
 
 <footer>
   <div class="wrap">
-    <span class="mark" style="font-size:1.5rem"><svg class="tw" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B8860B"/></svg>DIGNÉA<span class="inc">Inc.</span></span>
-    <p class="mission">Devenir l'infrastructure du vieillissement digne au Québec.</p>
-    <p class="founders">Fondée par Gabriel Boutin et Pierre-Paul Dorelien.</p>
-    <div class="meta">
-      <span>dignea.ca</span><span>Québec, Canada</span><span>contact@dignea.ca</span>
+    <div class="foot-grid">
+      <div>
+        <span class="mark" style="font-size:1.5rem"><svg class="tw" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B8860B"/></svg>DIGNÉA<span class="inc">Inc.</span></span>
+        <p class="mission">Devenir l'infrastructure du vieillissement digne au Québec.</p>
+        <p class="founders">Fondée par Gabriel Boutin et Pierre-Paul Dorelien.</p>
+      </div>
+      <div>
+        <div class="meta">
+          <span>Québec, Canada</span><span><a href="mailto:contact@dignea.ca">contact@dignea.ca</a></span>
+        </div>
+        <p class="pre">Plateforme en pré-lancement. Les interfaces présentées utilisent des données illustratives.</p>
+      </div>
     </div>
-    <p class="pre">Plateforme en pré-lancement. Les interfaces présentées utilisent des données illustratives.</p>
     <p class="sources">Sources des données citées : Institut de la statistique du Québec (2024) ; Regroupement québécois des résidences pour aînés (2026) ; AQRP (2025) ; AREQ (2026) ; Tableau de bord du réseau de la santé, Gouvernement du Québec (2026) ; Registre des résidences privées pour aînés, ministère de la Santé et des Services sociaux (2026).</p>
   </div>
 </footer>
 
 <script>
   (function(){
+    var mb = document.querySelector('.menu-btn'), mm = document.getElementById('mobile-menu');
+    if(mb && mm){
+      mb.addEventListener('click', function(){
+        var open = mm.classList.toggle('open');
+        mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+        mb.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+      });
+      mm.addEventListener('click', function(e){
+        if(e.target.tagName === 'A'){ mm.classList.remove('open'); mb.setAttribute('aria-expanded','false'); }
+      });
+    }
     var els = document.querySelectorAll('.reveal');
     if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
       els.forEach(function(e){e.classList.add('in')}); return;
