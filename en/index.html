@@ -57,8 +57,9 @@
 <style>
   :root{
     --navy:#1E3460; --gold:#B8860B; --cream:#F5EFE4; --warm:#FBF9F7; --ink:#1A1F2B;
-    --vert:#5F8A61; --urgent:#C45A3C; --ocre:#C8894A;
-    --lavande:#B097C7; --sage:#94A68F; --slate:#6F87A8;
+    --vert:#5F8A61; --urgent:#B94A3A; --ocre:#C08A2E;
+    --lavande:#8B7BB8; --sage:#5F8A61; --slate:#6F87A8;
+    --gold-deep:#9C6B0B; --gold-soft:#D4A544;
     --muted:rgba(26,31,43,.66); --hair:rgba(26,31,43,.1); --goldline:rgba(184,134,11,.4);
     --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',system-ui,-apple-system,sans-serif;
   }
@@ -69,8 +70,8 @@
   .wrap{max-width:1140px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
   section{padding:clamp(56px,9vw,120px) 0}
   h1,h2,h3{font-family:var(--serif);font-weight:600;color:var(--navy);letter-spacing:-.025em;line-height:1.05}
-  em{font-style:italic;color:var(--gold)}
-  .eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;font-weight:600;color:var(--ocre);margin-bottom:1.2rem}
+  em{font-style:normal;color:var(--gold)}
+  .eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;font-weight:600;color:var(--gold-deep);margin-bottom:1.2rem}
   .lede{font-size:clamp(1.05rem,2vw,1.2rem);color:var(--muted);max-width:52ch}
   .gold-rule{height:1px;background:var(--goldline);margin:0}
   /* mark */
@@ -120,11 +121,11 @@
   .trust i{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block}
   /* crisis band */
   .band-navy{background:var(--navy);color:var(--cream)}
-  .band-navy .eyebrow{color:#E7B23C;display:inline-flex;align-items:center;gap:.5rem}
+  .band-navy .eyebrow{color:var(--gold-soft);display:inline-flex;align-items:center;gap:.5rem}
   .band-navy .dot-u{width:6px;height:6px;border-radius:50%;background:var(--urgent)}
   .big740{display:flex;align-items:baseline;gap:1.2rem;flex-wrap:wrap;margin-bottom:1rem}
   .big740 .n{font-family:var(--serif);font-weight:600;color:var(--cream);font-size:clamp(4rem,15vw,8.5rem);line-height:.82;letter-spacing:-.04em;font-variant-numeric:lining-nums}
-  .big740 .l{font-family:var(--serif);font-style:italic;font-weight:500;color:#E7B23C;font-size:clamp(1.3rem,3.6vw,2.1rem);line-height:1.12;max-width:20ch}
+  .big740 .l{font-family:var(--serif);font-weight:500;color:var(--gold-soft);font-size:clamp(1.3rem,3.6vw,2.1rem);line-height:1.12;max-width:20ch}
   .band-navy .body{font-size:1.05rem;color:rgba(245,239,228,.85);max-width:64ch;margin-bottom:1.2rem}
   .band-navy .src{font-size:.74rem;color:rgba(245,239,228,.65)}
   /* ecosystem */
@@ -153,7 +154,7 @@
   .phbar{background:var(--navy);padding:13px 15px;color:#fff;display:flex;align-items:center;justify-content:space-between}
   .phbar .who{display:inline-flex;align-items:center;gap:5px;font-size:10px;color:rgba(255,255,255,.85)}
   .bubble-u{align-self:flex-end;max-width:84%;background:var(--navy);color:#fff;border-radius:14px 14px 4px 14px;padding:9px 12px;font-size:11.5px;line-height:1.45}
-  .bubble-s{align-self:flex-start;max-width:88%;background:rgba(176,151,199,.16);color:#3a2c4d;border-radius:14px 14px 14px 4px;padding:9px 12px;font-size:11.5px;line-height:1.5}
+  .bubble-s{align-self:flex-start;max-width:88%;background:rgba(139,123,184,.14);color:#3a2c4d;border-radius:14px 14px 14px 4px;padding:9px 12px;font-size:11.5px;line-height:1.5}
   .rescard{background:#fff;border:1px solid rgba(26,31,43,.08);border-radius:13px;padding:10px 12px}
   .rescard .top{display:flex;justify-content:space-between;align-items:center}
   .rescard .nm{font-family:var(--serif);font-size:15px;color:var(--navy)}
@@ -260,8 +261,8 @@
       <p class="lede reveal">Demand is accelerating, supply is shrinking. Dignéa, in development in Quebec, will connect families, seniors' residences and the public health network, so every senior finds a living environment worthy of them.</p>
       <div class="gold-rule reveal" style="margin:2.2rem 0 0"></div>
       <div class="stats reveal">
-        <div class="stat"><div class="num">+79%</div><p>more Quebecers aged 75 and over by 2036</p><span class="src">Institut de la statistique du Québec, 2024</span></div>
-        <div class="stat"><div class="num">740</div><p>seniors' residences closed since 2008</p><span class="src">RQRA, 2026</span></div>
+        <div class="stat"><div class="num">+71%</div><p>more Quebecers aged 75 and over from 2021 to 2036</p><span class="src">MSSS and Institut de la statistique du Québec</span></div>
+        <div class="stat"><div class="num">15%</div><p>of acute-care hospital beds occupied by patients awaiting placement</p><span class="src">Santé Québec, 2025-2026</span></div>
         <div class="stat"><div class="num">&gt; 7 months</div><p>average wait for a long-term care (CHSLD) bed</p><span class="src">AREQ, 2026</span></div>
       </div>
       <div class="btn-row reveal">
@@ -270,7 +271,7 @@
       </div>
       <div class="trust reveal">
         <span><i></i>Built in Quebec</span>
-        <span><i></i>Hosted in Canada</span>
+        <span><i></i>Health data kept in Quebec</span>
         <span><i></i>Built for Law 25</span>
         <span><i></i>Free for families</span>
       </div>
@@ -283,7 +284,7 @@
       <p class="eyebrow reveal"><span class="dot-u"></span>The crisis, right now</p>
       <div class="big740 reveal">
         <span class="n">740</span>
-        <span class="l">residences closed, nearly one a <em style="color:#E7B23C">week</em></span>
+        <span class="l">residences closed in eight years, nearly two a week</span>
       </div>
       <p class="body reveal">More than 1,400 senior tenants evicted in 2024. About 1,350 residences remain to meet needs that are exploding. Dignéa is designed to help those that remain fill their rooms, and families find them.</p>
       <p class="src reveal">RQRA, 2026 · AQRP, 2025</p>
@@ -294,7 +295,7 @@
   <section id="probleme">
     <div class="wrap">
       <p class="eyebrow reveal">The real issue</p>
-      <h2 class="reveal" style="font-size:clamp(2rem,5vw,3.4rem);max-width:18ch">The problem isn't supply. It's the <em>connection</em>.</h2>
+      <h2 class="reveal" style="font-size:clamp(2rem,5vw,3.4rem);max-width:18ch">The problem isn't supply. It's the connection.</h2>
       <div class="eco">
         <p class="lede reveal" style="max-width:none">Families, residences and public-network professionals operate in silos. Information flows poorly, decisions are made under pressure, and intermediaries fill the gap by monetizing the confusion. Dignéa is the opposite: a single layer, designed to connect everyone without commission. Whatever door you come through, you reach the right place.</p>
         <div class="eco-diagram reveal">
@@ -312,19 +313,19 @@
               <line x1="320" y1="248" x2="522" y2="386"/>
             </g>
             <g>
-              <circle cx="320" cy="80" r="44" fill="rgba(176,151,199,.18)" stroke="#B097C7" stroke-width="2"/>
-              <circle cx="320" cy="80" r="7" fill="#B097C7"/>
-              <circle cx="118" cy="386" r="44" fill="rgba(111,135,168,.18)" stroke="#6F87A8" stroke-width="2"/>
-              <circle cx="118" cy="386" r="7" fill="#6F87A8"/>
-              <circle cx="522" cy="386" r="44" fill="rgba(148,166,143,.2)" stroke="#94A68F" stroke-width="2"/>
-              <circle cx="522" cy="386" r="7" fill="#94A68F"/>
+              <circle cx="320" cy="80" r="44" fill="rgba(139,123,184,.16)" stroke="#8B7BB8" stroke-width="2"/>
+              <circle cx="320" cy="80" r="7" fill="#8B7BB8"/>
+              <circle cx="118" cy="386" r="44" fill="rgba(192,138,46,.14)" stroke="#C08A2E" stroke-width="2"/>
+              <circle cx="118" cy="386" r="7" fill="#C08A2E"/>
+              <circle cx="522" cy="386" r="44" fill="rgba(95,138,97,.14)" stroke="#5F8A61" stroke-width="2"/>
+              <circle cx="522" cy="386" r="7" fill="#5F8A61"/>
             </g>
             <circle cx="320" cy="248" r="64" fill="#1E3460"/>
             <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B8860B" transform="translate(306,216) scale(1.2)"/>
             <text x="320" y="264" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="22" font-weight="600" letter-spacing="1.5" fill="#F5EFE4">DIGNÉA</text>
             <g font-family="'Cormorant Garamond',Georgia,serif" font-size="26" font-weight="600" text-anchor="middle">
               <text x="320" y="150" fill="#5a4570">Families</text>
-              <text x="118" y="456" fill="#3a4a5e">Residences</text>
+              <text x="118" y="456" fill="#8A5E0A">Residences</text>
               <text x="522" y="456" fill="#42513d">Public network</text>
             </g>
           </svg>
@@ -341,13 +342,13 @@
   <section id="conseillers" style="background:var(--cream)">
     <div class="wrap">
       <p class="eyebrow reveal">The concierge that converses</p>
-      <h2 class="reveal" style="font-size:clamp(2rem,5vw,3.2rem);max-width:20ch">Four advisors, designed to handle the conversation and all the <em>logistics</em>.</h2>
+      <h2 class="reveal" style="font-size:clamp(2rem,5vw,3.2rem);max-width:20ch">Four advisors, designed to handle the conversation and all the logistics.</h2>
       <p class="lede reveal" style="margin-top:1.2rem">Built to be available 24/7, in natural Quebec French, by chat and by phone. No commission, no office hours.</p>
       <div class="grid-4">
         <div class="persona reveal"><span class="av" style="background:var(--lavande)">S</span><h3>Sophie</h3><p class="role">Families</p><p class="voice">"I completely understand. We'll find it together, at your pace."</p></div>
         <div class="persona reveal"><span class="av" style="background:var(--sage)">N</span><h3>Nadia</h3><p class="role">Public network · CIUSSS</p><p class="voice">"I have three residences with an opening. I prioritize urgent files."</p></div>
-        <div class="persona reveal"><span class="av" style="background:var(--slate)">D</span><h3>Daniel</h3><p class="role">Residences</p><p class="voice">"Three new prospects this week. Shall we schedule the tours?"</p></div>
-        <div class="persona reveal"><span class="av" style="background:var(--ocre)">S</span><h3>Samuel</h3><p class="role">Administration</p><p class="voice">"Your income statements are up to date. Here's what stands out this month."</p></div>
+        <div class="persona reveal"><span class="av" style="background:var(--ocre)">S</span><h3>Samuel</h3><p class="role">Residences</p><p class="voice">"Three new prospects this week. Shall we schedule the tours?"</p></div>
+        <div class="persona reveal"><span class="av" style="background:var(--slate)">D</span><h3>Daniel</h3><p class="role">Observatory</p><p class="voice">"Here's where placement delays moved this month, region by region."</p></div>
       </div>
       <div class="channels reveal">
         <span>Web chat</span><span>Voice calls</span><span>SMS</span><span>Email</span><span>Appointments</span><span>PDF reports</span>
@@ -359,7 +360,7 @@
   <section id="portails">
     <div class="wrap">
       <p class="eyebrow reveal">A preview of the platform</p>
-      <h2 class="reveal" style="font-size:clamp(2rem,5vw,3.2rem);max-width:18ch">Four portals. Each role will have its <em>interface</em>.</h2>
+      <h2 class="reveal" style="font-size:clamp(2rem,5vw,3.2rem);max-width:18ch">Four portals. Each role will have its interface.</h2>
       <p class="lede reveal" style="margin-top:1.2rem">The screens below are design previews, with fictitious data.</p>
 
       <!-- Families -->
@@ -372,7 +373,7 @@
         <div class="mock-surface reveal">
           <div class="phone">
             <div class="scr">
-              <div class="phbar"><span class="mark" style="font-size:15px;color:#fff"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B8860B"/></svg>DIGNÉA</span><span class="who"><span style="width:16px;height:16px;border-radius:50%;background:var(--lavande);display:inline-flex;align-items:center;justify-content:center;color:#3a2c4d;font-size:9px;font-weight:600">S</span>Sophie</span></div>
+              <div class="phbar"><span class="mark" style="font-size:15px;color:#fff"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B8860B"/></svg>DIGNÉA</span><span class="who"><span style="width:16px;height:16px;border-radius:50%;background:var(--lavande);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:600">S</span>Sophie</span></div>
               <div style="padding:14px 13px 6px;display:flex;flex-direction:column;gap:10px">
                 <div class="bubble-u">My mother leaves the hospital Friday. Assisted living, near Longueuil, around $3,500.</div>
                 <div class="bubble-s">I understand, we'll find it together. Here are 2 residences with an opening <strong style="font-weight:600">right now</strong>:</div>
@@ -381,7 +382,7 @@
                 <div class="rescard"><div class="top"><span class="nm">Villa des Tilleuls</span><span class="badge b-green">Available</span></div><p style="font-size:10px;color:rgba(26,31,43,.62);margin:5px 0 0">Longueuil · assisted living · $3,280/mo</p><p style="font-size:9px;color:var(--vert);margin:4px 0 0">● Availability verified 6 min ago</p></div>
                 <div class="rescard"><div class="top"><span class="nm">Résidence Clair-Matin</span><span class="badge b-green">2 spots</span></div><p style="font-size:10px;color:rgba(26,31,43,.62);margin:5px 0 0">Brossard · assisted living · $3,410/mo</p></div>
               </div>
-              <div style="padding:6px 13px 14px"><div style="display:flex;align-items:center;gap:8px;padding:9px 11px;background:rgba(176,151,199,.14);border-radius:11px"><span style="width:22px;height:22px;border-radius:50%;background:var(--lavande);display:inline-flex;align-items:center;justify-content:center;color:#3a2c4d;font-size:10px;font-weight:600">S</span><span style="font-size:10px;color:#3a2c4d;line-height:1.35"><strong style="font-weight:600">Sophie</strong> · Shall I text you the listings?</span></div></div>
+              <div style="padding:6px 13px 14px"><div style="display:flex;align-items:center;gap:8px;padding:9px 11px;background:rgba(139,123,184,.12);border-radius:11px"><span style="width:22px;height:22px;border-radius:50%;background:var(--lavande);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:600">S</span><span style="font-size:10px;color:#3a2c4d;line-height:1.35"><strong style="font-weight:600">Sophie</strong> · Shall I text you the listings?</span></div></div>
             </div>
           </div>
         </div>
@@ -390,7 +391,7 @@
       <!-- Residences CRM -->
       <div class="portal flip">
         <div class="pcopy reveal">
-          <p class="ptag" style="color:#3a4a5e"><span style="width:9px;height:9px;border-radius:50%;background:var(--slate);display:inline-block"></span>Residences portal · Daniel</p>
+          <p class="ptag" style="color:#8A5E0A"><span style="width:9px;height:9px;border-radius:50%;background:var(--ocre);display:inline-block"></span>Residences portal · Samuel</p>
           <h3>The acquisition channel they never had.</h3>
           <p>Existing software handles the back office. None fills the rooms. Dignéa's CRM will bring in prospects (families and the public network), track each file from tour to lease, and follow up at the right moment. Built to coexist with Hopem and Primmo: not a migration, a complement.</p>
         </div>
@@ -405,14 +406,14 @@
                 <span class="item">Waitlist</span><span class="item">Family surveys</span><span class="item">Income statement</span>
               </aside>
               <div class="bmain">
-                <div class="advisor" style="background:rgba(111,135,168,.12)"><span class="av" style="background:var(--slate)">D</span><span><strong style="font-weight:600">Daniel</strong> · 3 prospects via Sophie this week. Ms. Côté has been awaiting follow-up for 2 days.</span></div>
+                <div class="advisor" style="background:rgba(192,138,46,.12)"><span class="av" style="background:var(--ocre)">S</span><span><strong style="font-weight:600">Samuel</strong> · 3 prospects via Sophie this week. Ms. Côté has been awaiting follow-up for 2 days.</span></div>
                 <div class="kanban">
                   <div class="kcol"><p class="h">New · 3</p>
-                    <div class="kcard"><p class="nm">Mr. Tremblay</p><p class="meta">Assisted studio · $3,200</p><span class="ktag" style="color:#5a4570;background:rgba(176,151,199,.2)">via Sophie</span></div>
-                    <div class="kcard"><p class="nm">Gagnon family</p><p class="meta">48h urgent · 1 spot</p><span class="ktag" style="color:#42513d;background:rgba(148,166,143,.24)">via CIUSSS</span></div>
+                    <div class="kcard"><p class="nm">Mr. Tremblay</p><p class="meta">Assisted studio · $3,200</p><span class="ktag" style="color:#5a4570;background:rgba(139,123,184,.16)">via Sophie</span></div>
+                    <div class="kcard"><p class="nm">Gagnon family</p><p class="meta">48h urgent · 1 spot</p><span class="ktag" style="color:#42513d;background:rgba(95,138,97,.16)">via CIUSSS</span></div>
                   </div>
                   <div class="kcol"><p class="h">Tour · 2</p>
-                    <div class="kcard"><p class="nm">Ms. Côté</p><p class="meta">1-bdrm independent · Fri 2 PM</p><span class="ktag" style="color:#8a3d20;background:rgba(196,90,60,.16)">Follow-up due</span></div>
+                    <div class="kcard"><p class="nm">Ms. Côté</p><p class="meta">1-bdrm independent · Fri 2 PM</p><span class="ktag" style="color:#8a3d20;background:rgba(185,74,58,.14)">Follow-up due</span></div>
                     <div class="kcard"><p class="nm">Mr. Bélanger</p><p class="meta">Assisted studio · Mon 10 AM</p><span class="ktag" style="color:#3a4a5e;background:rgba(111,135,168,.2)">added</span></div>
                   </div>
                   <div class="kcol"><p class="h">Lease · 1</p>
@@ -436,7 +437,7 @@
           <div class="browser">
             <div class="bchrome"><span class="bdots"><i style="background:#e0726a"></i><i style="background:#e7b23c"></i><i style="background:#7fb37f"></i></span><span class="burl">app.dignea.ca/pro/urgence</span></div>
             <div style="background:#fff;padding:16px 18px;min-height:330px">
-              <div class="advisor" style="background:rgba(148,166,143,.14)"><span class="av" style="background:var(--sage)">N</span><span><strong style="font-weight:600">Nadia</strong> · 3 residences confirmed an opening. I'm preparing the placement proposal.</span></div>
+              <div class="advisor" style="background:rgba(95,138,97,.12)"><span class="av" style="background:var(--sage)">N</span><span><strong style="font-weight:600">Nadia</strong> · 3 residences confirmed an opening. I'm preparing the placement proposal.</span></div>
               <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:14px">
                 <span style="display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--urgent);font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:var(--urgent)"></span>Urgent request · File 2026-0412</span>
                 <span style="font-size:11px;color:rgba(26,31,43,.55)">Responses within 48h · 31h elapsed</span>
@@ -470,7 +471,7 @@
   <!-- CLOSE -->
   <section class="close">
     <div class="wrap">
-      <blockquote class="reveal">Every empty room is a family waiting. We exist to bring them <em>together</em>.</blockquote>
+      <blockquote class="reveal">Every empty room is a family waiting. We exist to bring them together.</blockquote>
       <div class="btn-row reveal">
         <a href="mailto:contact@dignea.ca?subject=Early%20access%20request%20-%20Dign%C3%A9a" class="btn btn-primary">Request early access</a>
         <a href="mailto:rprp@dignea.ca?subject=Becoming%20a%20pilot%20residence" class="btn btn-ghost">Become a pilot residence &rarr;</a>
@@ -478,7 +479,7 @@
       <p class="reveal" style="font-size:.88rem;color:var(--muted);margin-top:1.4rem">Or write to us directly: <a href="mailto:contact@dignea.ca" style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px">contact@dignea.ca</a></p>
       <div class="trust reveal" style="justify-content:center">
         <span><i></i>Built in Quebec</span>
-        <span><i></i>Hosted in Canada</span>
+        <span><i></i>Health data kept in Quebec</span>
         <span><i></i>Built for Law 25</span>
         <span><i></i>Free for families</span>
       </div>
@@ -502,7 +503,7 @@
         <p class="pre">Platform in pre-launch. The interfaces shown use illustrative data. Showcase site: no tracking, no cookies. The full privacy policy will accompany the platform launch.</p>
       </div>
     </div>
-    <p class="sources">Sources for the data cited: Institut de la statistique du Québec (2024); Regroupement québécois des résidences pour aînés (2026); AQRP (2025); AREQ (2026); Quebec health network performance dashboard (2026); Registry of private seniors' residences, ministère de la Santé et des Services sociaux (2026).</p>
+    <p class="sources">Sources for the data cited: MSSS and Institut de la statistique du Québec (2021 to 2036 projections); Regroupement québécois des résidences pour aînés (2026); AQRP (2025); AREQ (2026); Santé Québec (2026); Registry of private seniors' residences, ministère de la Santé et des Services sociaux (2026).</p>
   </div>
 </footer>
 

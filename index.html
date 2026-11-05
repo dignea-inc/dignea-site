@@ -54,18 +54,19 @@
   CHIFFRES : tous vérifiés et sourcés. Source unique de vérité : docs/STATS-VERIFIEES-2026-06.md
   Pour mettre à jour un chiffre, modifier ici ET le registre. Données de démo = fictives (Loi 25).
   Faits utilisés :
-   - 75 ans+ : +79% d'ici 2036 (ISQ 2024)
-   - RPA fermées : 740 depuis 2008, ~1 350 restantes (RQRA 2026)
+   - 75 ans+ : environ +71 % de 2021 à 2036 (MSSS et ISQ)
+   - RPA fermées : 740 en huit ans, environ 1 350 restantes (RQRA 2026)
    - Évictions : 1 400+ en 2024 (AQRP 2025)
    - Attente CHSLD : >7 mois (AREQ 2026)
-   - Lits NSA : ~11-12%, cible 8% (Gouv. Québec 2026)
+   - Lits NSA : environ 15 % en 2025-2026, cible 8 % en 2027-2028 (Santé Québec, cité par La Presse le 7 mai 2026)
    - Registre public des RPA (MSSS 2026)
 -->
 <style>
   :root{
     --navy:#1E3460; --gold:#B8860B; --cream:#F5EFE4; --warm:#FBF9F7; --ink:#1A1F2B;
-    --vert:#5F8A61; --urgent:#C45A3C; --ocre:#C8894A;
-    --lavande:#B097C7; --sage:#94A68F; --slate:#6F87A8;
+    --vert:#5F8A61; --urgent:#B94A3A; --ocre:#C08A2E;
+    --lavande:#8B7BB8; --sage:#5F8A61; --slate:#6F87A8;
+    --gold-deep:#9C6B0B; --gold-soft:#D4A544;
     --muted:rgba(26,31,43,.66); --hair:rgba(26,31,43,.1); --goldline:rgba(184,134,11,.4);
     --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',system-ui,-apple-system,sans-serif;
   }
@@ -76,8 +77,8 @@
   .wrap{max-width:1140px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
   section{padding:clamp(56px,9vw,120px) 0}
   h1,h2,h3{font-family:var(--serif);font-weight:600;color:var(--navy);letter-spacing:-.025em;line-height:1.05}
-  em{font-style:italic;color:var(--gold)}
-  .eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;font-weight:600;color:var(--ocre);margin-bottom:1.2rem}
+  em{font-style:normal;color:var(--gold)}
+  .eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;font-weight:600;color:var(--gold-deep);margin-bottom:1.2rem}
   .lede{font-size:clamp(1.05rem,2vw,1.2rem);color:var(--muted);max-width:52ch}
   .gold-rule{height:1px;background:var(--goldline);margin:0}
   /* mark */
@@ -127,11 +128,11 @@
   .trust i{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block}
   /* crisis band */
   .band-navy{background:var(--navy);color:var(--cream)}
-  .band-navy .eyebrow{color:#E7B23C;display:inline-flex;align-items:center;gap:.5rem}
+  .band-navy .eyebrow{color:var(--gold-soft);display:inline-flex;align-items:center;gap:.5rem}
   .band-navy .dot-u{width:6px;height:6px;border-radius:50%;background:var(--urgent)}
   .big740{display:flex;align-items:baseline;gap:1.2rem;flex-wrap:wrap;margin-bottom:1rem}
   .big740 .n{font-family:var(--serif);font-weight:600;color:var(--cream);font-size:clamp(4rem,15vw,8.5rem);line-height:.82;letter-spacing:-.04em;font-variant-numeric:lining-nums}
-  .big740 .l{font-family:var(--serif);font-style:italic;font-weight:500;color:#E7B23C;font-size:clamp(1.3rem,3.6vw,2.1rem);line-height:1.12;max-width:20ch}
+  .big740 .l{font-family:var(--serif);font-weight:500;color:var(--gold-soft);font-size:clamp(1.3rem,3.6vw,2.1rem);line-height:1.12;max-width:20ch}
   .band-navy .body{font-size:1.05rem;color:rgba(245,239,228,.85);max-width:64ch;margin-bottom:1.2rem}
   .band-navy .src{font-size:.74rem;color:rgba(245,239,228,.65)}
   /* ecosystem */
@@ -160,7 +161,7 @@
   .phbar{background:var(--navy);padding:13px 15px;color:#fff;display:flex;align-items:center;justify-content:space-between}
   .phbar .who{display:inline-flex;align-items:center;gap:5px;font-size:10px;color:rgba(255,255,255,.85)}
   .bubble-u{align-self:flex-end;max-width:84%;background:var(--navy);color:#fff;border-radius:14px 14px 4px 14px;padding:9px 12px;font-size:11.5px;line-height:1.45}
-  .bubble-s{align-self:flex-start;max-width:88%;background:rgba(176,151,199,.16);color:#3a2c4d;border-radius:14px 14px 14px 4px;padding:9px 12px;font-size:11.5px;line-height:1.5}
+  .bubble-s{align-self:flex-start;max-width:88%;background:rgba(139,123,184,.14);color:#3a2c4d;border-radius:14px 14px 14px 4px;padding:9px 12px;font-size:11.5px;line-height:1.5}
   .rescard{background:#fff;border:1px solid rgba(26,31,43,.08);border-radius:13px;padding:10px 12px}
   .rescard .top{display:flex;justify-content:space-between;align-items:center}
   .rescard .nm{font-family:var(--serif);font-size:15px;color:var(--navy)}
@@ -268,8 +269,8 @@
       <p class="lede reveal">La demande s'accélère, l'offre se contracte. Dignéa, en développement au Québec, reliera les familles, les résidences pour aînés et le réseau public, pour que chaque aîné trouve un milieu de vie à sa hauteur.</p>
       <div class="gold-rule reveal" style="margin:2.2rem 0 0"></div>
       <div class="stats reveal">
-        <div class="stat"><div class="num">+79&#8201;%</div><p>de Québécois de 75 ans et plus d'ici 2036</p><span class="src">Institut de la statistique du Québec, 2024</span></div>
-        <div class="stat"><div class="num">740</div><p>résidences pour aînés fermées depuis 2008</p><span class="src">RQRA, 2026</span></div>
+        <div class="stat"><div class="num">+71&#8201;%</div><p>de Québécois de 75 ans et plus de 2021 à 2036</p><span class="src">MSSS et Institut de la statistique du Québec</span></div>
+        <div class="stat"><div class="num">15&#8201;%</div><p>des lits de courte durée occupés par des patients en attente d'hébergement</p><span class="src">Santé Québec, 2025-2026</span></div>
         <div class="stat"><div class="num">&gt;&#8201;7 mois</div><p>d'attente moyenne pour une place en CHSLD</p><span class="src">AREQ, 2026</span></div>
       </div>
       <div class="btn-row reveal">
@@ -278,7 +279,7 @@
       </div>
       <div class="trust reveal">
         <span><i></i>Conçu au Québec</span>
-        <span><i></i>Hébergé au Canada</span>
+        <span><i></i>Données de santé au Québec</span>
         <span><i></i>Conçu selon la Loi 25</span>
         <span><i></i>Gratuit pour les familles</span>
       </div>
@@ -291,7 +292,7 @@
       <p class="eyebrow reveal"><span class="dot-u"></span>La crise, en ce moment</p>
       <div class="big740 reveal">
         <span class="n">740</span>
-        <span class="l">résidences fermées, près d'une par <em style="color:#E7B23C">semaine</em></span>
+        <span class="l">résidences fermées en huit ans, près de deux par semaine</span>
       </div>
       <p class="body reveal">Plus de 1&#8201;400 locataires aînés évincés en 2024. Il reste environ 1&#8201;350 résidences pour répondre à des besoins qui, eux, explosent. Dignéa est conçue pour aider celles qui restent à remplir leurs chambres, et les familles à les trouver.</p>
       <p class="src reveal">RQRA, 2026 · AQRP, 2025</p>
@@ -302,7 +303,7 @@
   <section id="probleme">
     <div class="wrap">
       <p class="eyebrow reveal">Le vrai enjeu</p>
-      <h2 class="reveal" style="font-size:clamp(2rem,5vw,3.4rem);max-width:18ch">Le problème n'est pas l'offre. C'est la <em>connexion</em>.</h2>
+      <h2 class="reveal" style="font-size:clamp(2rem,5vw,3.4rem);max-width:18ch">Le problème n'est pas l'offre. C'est la connexion.</h2>
       <div class="eco">
         <p class="lede reveal" style="max-width:none">Familles, résidences et professionnels du réseau public opèrent en silos. L'information circule mal, les décisions se prennent dans l'urgence, et des intermédiaires comblent ce vide en monétisant la confusion. Dignéa, c'est l'inverse : une seule couche, conçue pour relier tout le monde sans commission. Peu importe la porte d'entrée, on arrivera au bon endroit.</p>
         <div class="eco-diagram reveal">
@@ -320,19 +321,19 @@
               <line x1="320" y1="248" x2="522" y2="386"/>
             </g>
             <g>
-              <circle cx="320" cy="80" r="44" fill="rgba(176,151,199,.18)" stroke="#B097C7" stroke-width="2"/>
-              <circle cx="320" cy="80" r="7" fill="#B097C7"/>
-              <circle cx="118" cy="386" r="44" fill="rgba(111,135,168,.18)" stroke="#6F87A8" stroke-width="2"/>
-              <circle cx="118" cy="386" r="7" fill="#6F87A8"/>
-              <circle cx="522" cy="386" r="44" fill="rgba(148,166,143,.2)" stroke="#94A68F" stroke-width="2"/>
-              <circle cx="522" cy="386" r="7" fill="#94A68F"/>
+              <circle cx="320" cy="80" r="44" fill="rgba(139,123,184,.16)" stroke="#8B7BB8" stroke-width="2"/>
+              <circle cx="320" cy="80" r="7" fill="#8B7BB8"/>
+              <circle cx="118" cy="386" r="44" fill="rgba(192,138,46,.14)" stroke="#C08A2E" stroke-width="2"/>
+              <circle cx="118" cy="386" r="7" fill="#C08A2E"/>
+              <circle cx="522" cy="386" r="44" fill="rgba(95,138,97,.14)" stroke="#5F8A61" stroke-width="2"/>
+              <circle cx="522" cy="386" r="7" fill="#5F8A61"/>
             </g>
             <circle cx="320" cy="248" r="64" fill="#1E3460"/>
             <path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B8860B" transform="translate(306,216) scale(1.2)"/>
             <text x="320" y="264" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="22" font-weight="600" letter-spacing="1.5" fill="#F5EFE4">DIGNÉA</text>
             <g font-family="'Cormorant Garamond',Georgia,serif" font-size="26" font-weight="600" text-anchor="middle">
               <text x="320" y="150" fill="#5a4570">Familles</text>
-              <text x="118" y="456" fill="#3a4a5e">Résidences</text>
+              <text x="118" y="456" fill="#8A5E0A">Résidences</text>
               <text x="522" y="456" fill="#42513d">Réseau public</text>
             </g>
           </svg>
@@ -349,13 +350,13 @@
   <section id="conseillers" style="background:var(--cream)">
     <div class="wrap">
       <p class="eyebrow reveal">La conciergerie qui converse</p>
-      <h2 class="reveal" style="font-size:clamp(2rem,5vw,3.2rem);max-width:20ch">Quatre conseillers, conçus pour tenir la conversation et toute la <em>logistique</em>.</h2>
+      <h2 class="reveal" style="font-size:clamp(2rem,5vw,3.2rem);max-width:20ch">Quatre conseillers, conçus pour tenir la conversation et toute la logistique.</h2>
       <p class="lede reveal" style="margin-top:1.2rem">Pensés pour être disponibles 24/7, en français québécois naturel, par clavardage et par téléphone. Sans commission, sans heures de bureau.</p>
       <div class="grid-4">
         <div class="persona reveal"><span class="av" style="background:var(--lavande)">S</span><h3>Sophie</h3><p class="role">Familles</p><p class="voice">« Je comprends tout à fait. On va trouver ensemble, à votre rythme. »</p></div>
         <div class="persona reveal"><span class="av" style="background:var(--sage)">N</span><h3>Nadia</h3><p class="role">Réseau public · CIUSSS</p><p class="voice">« J'ai trois résidences avec une place. Je priorise les dossiers urgents. »</p></div>
-        <div class="persona reveal"><span class="av" style="background:var(--slate)">D</span><h3>Daniel</h3><p class="role">Résidences</p><p class="voice">« Trois nouveaux prospects cette semaine. On planifie les visites ? »</p></div>
-        <div class="persona reveal"><span class="av" style="background:var(--ocre)">S</span><h3>Samuel</h3><p class="role">Administration</p><p class="voice">« Vos états des résultats sont à jour. Voici ce qui ressort ce mois-ci. »</p></div>
+        <div class="persona reveal"><span class="av" style="background:var(--ocre)">S</span><h3>Samuel</h3><p class="role">Résidences</p><p class="voice">« Trois nouveaux prospects cette semaine. On planifie les visites ? »</p></div>
+        <div class="persona reveal"><span class="av" style="background:var(--slate)">D</span><h3>Daniel</h3><p class="role">Observatoire</p><p class="voice">« Voici où les délais d'hébergement ont bougé ce mois-ci, région par région. »</p></div>
       </div>
       <div class="channels reveal">
         <span>Clavardage web</span><span>Appels vocaux</span><span>SMS</span><span>Courriel</span><span>Rendez-vous</span><span>Rapports PDF</span>
@@ -367,7 +368,7 @@
   <section id="portails">
     <div class="wrap">
       <p class="eyebrow reveal">Un aperçu de la plateforme</p>
-      <h2 class="reveal" style="font-size:clamp(2rem,5vw,3.2rem);max-width:18ch">Quatre portails. Chaque rôle aura son <em>interface</em>.</h2>
+      <h2 class="reveal" style="font-size:clamp(2rem,5vw,3.2rem);max-width:18ch">Quatre portails. Chaque rôle aura son interface.</h2>
       <p class="lede reveal" style="margin-top:1.2rem">Les écrans ci-dessous sont des aperçus de conception, avec des données fictives.</p>
 
       <!-- Familles -->
@@ -380,7 +381,7 @@
         <div class="mock-surface reveal">
           <div class="phone">
             <div class="scr">
-              <div class="phbar"><span class="mark" style="font-size:15px;color:#fff"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B8860B"/></svg>DIGNÉA</span><span class="who"><span style="width:16px;height:16px;border-radius:50%;background:var(--lavande);display:inline-flex;align-items:center;justify-content:center;color:#3a2c4d;font-size:9px;font-weight:600">S</span>Sophie</span></div>
+              <div class="phbar"><span class="mark" style="font-size:15px;color:#fff"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B8860B"/></svg>DIGNÉA</span><span class="who"><span style="width:16px;height:16px;border-radius:50%;background:var(--lavande);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:600">S</span>Sophie</span></div>
               <div style="padding:14px 13px 6px;display:flex;flex-direction:column;gap:10px">
                 <div class="bubble-u">Ma mère sort de l'hôpital vendredi. Soins assistés, près de Longueuil, autour de 3&#8201;500&#8201;$.</div>
                 <div class="bubble-s">Je comprends, on va trouver ensemble. Voici 2 résidences avec une place <strong style="font-weight:600">dès maintenant</strong> :</div>
@@ -389,7 +390,7 @@
                 <div class="rescard"><div class="top"><span class="nm">Villa des Tilleuls</span><span class="badge b-green">Place dispo</span></div><p style="font-size:10px;color:rgba(26,31,43,.62);margin:5px 0 0">Longueuil · soins assistés · 3&#8201;280&#8201;$/mois</p><p style="font-size:9px;color:var(--vert);margin:4px 0 0">● Disponibilité vérifiée il y a 6 min</p></div>
                 <div class="rescard"><div class="top"><span class="nm">Résidence Clair-Matin</span><span class="badge b-green">2 places</span></div><p style="font-size:10px;color:rgba(26,31,43,.62);margin:5px 0 0">Brossard · soins assistés · 3&#8201;410&#8201;$/mois</p></div>
               </div>
-              <div style="padding:6px 13px 14px"><div style="display:flex;align-items:center;gap:8px;padding:9px 11px;background:rgba(176,151,199,.14);border-radius:11px"><span style="width:22px;height:22px;border-radius:50%;background:var(--lavande);display:inline-flex;align-items:center;justify-content:center;color:#3a2c4d;font-size:10px;font-weight:600">S</span><span style="font-size:10px;color:#3a2c4d;line-height:1.35"><strong style="font-weight:600">Sophie</strong> · Je vous envoie les fiches par texto ?</span></div></div>
+              <div style="padding:6px 13px 14px"><div style="display:flex;align-items:center;gap:8px;padding:9px 11px;background:rgba(139,123,184,.12);border-radius:11px"><span style="width:22px;height:22px;border-radius:50%;background:var(--lavande);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:600">S</span><span style="font-size:10px;color:#3a2c4d;line-height:1.35"><strong style="font-weight:600">Sophie</strong> · Je vous envoie les fiches par texto ?</span></div></div>
             </div>
           </div>
         </div>
@@ -398,7 +399,7 @@
       <!-- RPA CRM -->
       <div class="portal flip">
         <div class="pcopy reveal">
-          <p class="ptag" style="color:#3a4a5e"><span style="width:9px;height:9px;border-radius:50%;background:var(--slate);display:inline-block"></span>Portail Résidences · Daniel</p>
+          <p class="ptag" style="color:#8A5E0A"><span style="width:9px;height:9px;border-radius:50%;background:var(--ocre);display:inline-block"></span>Portail Résidences · Samuel</p>
           <h3>Le canal d'acquisition qu'elles n'avaient pas.</h3>
           <p>Les logiciels existants gèrent l'administratif. Aucun ne remplit les chambres. Le CRM de Dignéa fera entrer les prospects (familles et réseau public), suivra chaque dossier de la visite au bail, et relancera au bon moment. Conçu pour cohabiter avec Hopem et Primmo : pas une migration, un complément.</p>
         </div>
@@ -413,14 +414,14 @@
                 <span class="item">Liste d'attente</span><span class="item">Sondages familles</span><span class="item">État des résultats</span>
               </aside>
               <div class="bmain">
-                <div class="advisor" style="background:rgba(111,135,168,.12)"><span class="av" style="background:var(--slate)">D</span><span><strong style="font-weight:600">Daniel</strong> · 3 prospects via Sophie cette semaine. Mme Côté attend une relance depuis 2 jours.</span></div>
+                <div class="advisor" style="background:rgba(192,138,46,.12)"><span class="av" style="background:var(--ocre)">S</span><span><strong style="font-weight:600">Samuel</strong> · 3 prospects via Sophie cette semaine. Mme Côté attend une relance depuis 2 jours.</span></div>
                 <div class="kanban">
                   <div class="kcol"><p class="h">Nouveaux · 3</p>
-                    <div class="kcard"><p class="nm">M. Tremblay</p><p class="meta">Studio assistée · 3&#8201;200&#8201;$</p><span class="ktag" style="color:#5a4570;background:rgba(176,151,199,.2)">via Sophie</span></div>
-                    <div class="kcard"><p class="nm">Fam. Gagnon</p><p class="meta">Urgence 48 h · 1 place</p><span class="ktag" style="color:#42513d;background:rgba(148,166,143,.24)">via CIUSSS</span></div>
+                    <div class="kcard"><p class="nm">M. Tremblay</p><p class="meta">Studio assistée · 3&#8201;200&#8201;$</p><span class="ktag" style="color:#5a4570;background:rgba(139,123,184,.16)">via Sophie</span></div>
+                    <div class="kcard"><p class="nm">Fam. Gagnon</p><p class="meta">Urgence 48 h · 1 place</p><span class="ktag" style="color:#42513d;background:rgba(95,138,97,.16)">via CIUSSS</span></div>
                   </div>
                   <div class="kcol"><p class="h">Visite · 2</p>
-                    <div class="kcard"><p class="nm">Mme Côté</p><p class="meta">3½ autonome · ven. 14 h</p><span class="ktag" style="color:#8a3d20;background:rgba(196,90,60,.16)">Relance due</span></div>
+                    <div class="kcard"><p class="nm">Mme Côté</p><p class="meta">3½ autonome · ven. 14 h</p><span class="ktag" style="color:#8a3d20;background:rgba(185,74,58,.14)">Relance due</span></div>
                     <div class="kcard"><p class="nm">M. Bélanger</p><p class="meta">Studio assistée · lun. 10 h</p><span class="ktag" style="color:#3a4a5e;background:rgba(111,135,168,.2)">ajouté</span></div>
                   </div>
                   <div class="kcol"><p class="h">Bail · 1</p>
@@ -444,7 +445,7 @@
           <div class="browser">
             <div class="bchrome"><span class="bdots"><i style="background:#e0726a"></i><i style="background:#e7b23c"></i><i style="background:#7fb37f"></i></span><span class="burl">app.dignea.ca/pro/urgence</span></div>
             <div style="background:#fff;padding:16px 18px;min-height:330px">
-              <div class="advisor" style="background:rgba(148,166,143,.14)"><span class="av" style="background:var(--sage)">N</span><span><strong style="font-weight:600">Nadia</strong> · 3 résidences ont confirmé une place. Je prépare la proposition de placement.</span></div>
+              <div class="advisor" style="background:rgba(95,138,97,.12)"><span class="av" style="background:var(--sage)">N</span><span><strong style="font-weight:600">Nadia</strong> · 3 résidences ont confirmé une place. Je prépare la proposition de placement.</span></div>
               <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:14px">
                 <span style="display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--urgent);font-weight:600"><span style="width:6px;height:6px;border-radius:50%;background:var(--urgent)"></span>Demande urgente · Dossier 2026-0412</span>
                 <span style="font-size:11px;color:rgba(26,31,43,.55)">Réponses sous 48 h · 31 h écoulées</span>
@@ -478,7 +479,7 @@
   <!-- CLOSE -->
   <section class="close">
     <div class="wrap">
-      <blockquote class="reveal">Chaque place vide est une famille qui attend. Nous existons pour les <em>réunir</em>.</blockquote>
+      <blockquote class="reveal">Chaque place vide est une famille qui attend. Nous existons pour les réunir.</blockquote>
       <div class="btn-row reveal">
         <a href="mailto:contact@dignea.ca?subject=Demande%20d%27acc%C3%A8s%20anticip%C3%A9%20%C3%A0%20Dign%C3%A9a" class="btn btn-primary">Demander un accès anticipé</a>
         <a href="mailto:rprp@dignea.ca?subject=Devenir%20r%C3%A9sidence%20pilote" class="btn btn-ghost">Devenir résidence pilote &rarr;</a>
@@ -486,7 +487,7 @@
       <p class="reveal" style="font-size:.88rem;color:var(--muted);margin-top:1.4rem">Ou écrivez-nous directement : <a href="mailto:contact@dignea.ca" style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px">contact@dignea.ca</a></p>
       <div class="trust reveal" style="justify-content:center">
         <span><i></i>Conçu au Québec</span>
-        <span><i></i>Hébergé au Canada</span>
+        <span><i></i>Données de santé au Québec</span>
         <span><i></i>Conçu selon la Loi 25</span>
         <span><i></i>Gratuit pour les familles</span>
       </div>
@@ -510,7 +511,7 @@
         <p class="pre">Plateforme en pré-lancement. Les interfaces présentées utilisent des données illustratives. Site vitrine : aucun suivi, aucun témoin. La politique de confidentialité complète accompagnera le lancement de la plateforme.</p>
       </div>
     </div>
-    <p class="sources">Sources des données citées : Institut de la statistique du Québec (2024) ; Regroupement québécois des résidences pour aînés (2026) ; AQRP (2025) ; AREQ (2026) ; Tableau de bord du réseau de la santé, Gouvernement du Québec (2026) ; Registre des résidences privées pour aînés, ministère de la Santé et des Services sociaux (2026).</p>
+    <p class="sources">Sources des données citées : ministère de la Santé et des Services sociaux et Institut de la statistique du Québec (projections 2021 à 2036) ; Regroupement québécois des résidences pour aînés (2026) ; AQRP (2025) ; AREQ (2026) ; Santé Québec (2026) ; Registre des résidences privées pour aînés, ministère de la Santé et des Services sociaux (2026).</p>
   </div>
 </footer>
 
